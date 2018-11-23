@@ -1,0 +1,55 @@
+<h1>Update</h1>
+
+<form name="formID">
+	<div class="form-group">
+		<label for="id">Ingresa ID de registro a editar:</label>
+    	<input type="text" 
+    		   class="form-control" 
+    		   id="id"
+    		   name="id"
+    		   ng-model="id"
+    		   ng-required = "true" 
+    		   placeholder="Ingresa aquí el ID">
+	</div>
+	<button type="button" 
+			class="btn btn-primary"
+			ng-disabled="formID.$invalid"
+			ng-click="getOne()">
+		Consultar
+	</button>
+</form>
+
+<br><br>
+
+<form name="formUpdate">
+	<label for="nombre">Nombre: <b>{{data.nombre}}</b></label> <br> 
+	<label for="primerApellido">Primer apellido: <b>{{data.primerApellido}}</b></label> <br>
+	<label for="segundoApellido">Segundo apellido: <b>{{data.segundoApellido}}</b></label> <br>
+	<div class="form-group">
+		<label for="correoElectronico">Correo electrónico:</label>
+		<input type="email"
+			   class="form-control"
+			   id="correoElectronico"
+			   name="correoElectronico"
+			   ng-model="data.correoElectronico"
+			   ng-required = "true"
+			   ng-maxlength="50"
+			   ng-pattern=" /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/">
+		<div ng-if="formUpdate.correoElectronico.$dirty">
+			<span class="error text-danger"
+				  ng-if="formUpdate.correoElectronico.$error.required">Campo requerido</span>
+			<span class="error text-danger"
+				  ng-if="formUpdate.correoElectronico.$error.pattern">Campo inválido</span>
+			<span class="error text-danger"
+				  ng-if="formUpdate.correoElectronico.$error.maxlength">Campo demasiado largo</span>
+		</div>
+	</div>
+	<button type="button" 
+			class="btn button-black"
+			ng-disabled="formUpdate.$invalid"
+			ng-click="actualizar(formUpdate)">
+		Actualizar
+	</button>
+</form>
+
+<br><br>

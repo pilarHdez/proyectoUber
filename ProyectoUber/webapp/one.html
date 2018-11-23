@@ -1,0 +1,28 @@
+<h1>One</h1>
+
+<form name="formID">
+	<div class="form-group">
+		<label for="id">ID:</label>
+    	<input type="text" 
+    		   class="form-control" 
+    		   id="id"
+    		   name="id"
+    		   ng-model="id"
+    		   ng-required = "true" 
+    		   placeholder="Ingresa aquí el ID a consultar">
+	</div>
+	<button type="button" 
+			class="btn btn-primary"
+			ng-disabled="formID.$invalid"
+			ng-click="getOne()">
+		Consultar
+	</button>
+</form>
+
+<br><br>
+
+<div class="alert alert-primary" 
+	 role="alert"
+	 ng-if="showData">
+  	{{data.nombre}} {{data.primerApellido}} {{data.segundoApellido}} - {{data.correoElectronico}}
+</div>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://172.31.43.4:3306/cnspd</property>
+        <property name="hibernate.connection.username">proyecto</property>
+        <property name="hibernate.connection.password">i8ywtPMzAI</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping class="proyecto.persistence.CatAsignatura" />
+        <mapping class="proyecto.persistence.CatCampoDisciplinar" />
+        <mapping class="proyecto.persistence.CatCamposDocentes" />
+        <mapping class="proyecto.persistence.CatCategorias" />
+        <mapping class="proyecto.persistence.CatCausaNoAsignacion" />
+        <mapping class="proyecto.persistence.CatConcursos" />
+        <mapping class="proyecto.persistence.CatCct" />
+        <mapping class="proyecto.persistence.CatEntidadesFederativas" />
+        <mapping class="proyecto.persistence.CatEstatusLogin" />
+        <mapping class="proyecto.persistence.CatModalidad" />
+        <mapping class="proyecto.persistence.CatNivelesEducativos" />
+        <mapping class="proyecto.persistence.CatNombramientos" />
+        <mapping class="proyecto.persistence.CatProcesoDestinoVacancia" />
+        <mapping class="proyecto.persistence.CatRegiones" />
+        <mapping class="proyecto.persistence.CatServicioEducativo" />
+        <mapping class="proyecto.persistence.CatSistemasInformacion" />
+        <mapping class="proyecto.persistence.CatSubsistemas" />
+<!--         <mapping class="proyecto.persistence.CatTipoEvaluacion" /> -->
+        <mapping class="proyecto.persistence.CatTiposEvaluaciones" />
+        <mapping class="proyecto.persistence.CatTiposFunciones" />
+        <mapping class="proyecto.persistence.CatTiposSostenimientos" />
+        <mapping class="proyecto.persistence.CorreosElectronicos" />
+        <mapping class="proyecto.persistence.CorrigeCurpsIncorrectas" />
+        <mapping class="proyecto.persistence.CurpsTramite" />
+        <mapping class="proyecto.persistence.Docentes" />
+        <mapping class="proyecto.persistence.DocentesPerfiles" />
+        <mapping class="proyecto.persistence.DocentesPropiedades" />
+        <mapping class="proyecto.persistence.DocentesSistemasInformacion" />
+        <mapping class="proyecto.persistence.DocentesTramite" />
+        <mapping class="proyecto.persistence.IdoneidadDesarrollo" />
+        <mapping class="proyecto.persistence.Login" />
+        <mapping class="proyecto.persistence.LogLogin" />
+        <mapping class="proyecto.persistence.NoIdoneo" />
+        <mapping class="proyecto.persistence.Perfiles" />
+        <mapping class="proyecto.persistence.SapAsignacion" />
+        <mapping class="proyecto.persistence.SapCatAsignaturas" />
+        <mapping class="proyecto.persistence.SapCatExamenDisciplinar" />
+        <mapping class="proyecto.persistence.SapCatFigura" />
+        <mapping class="proyecto.persistence.SapCatTipoConcurso" />
+        <mapping class="proyecto.persistence.SapEventoPublico" />
+        <mapping class="proyecto.persistence.SapNoAsignados" />
+        <mapping class="proyecto.persistence.SapPlaza" />
+        <mapping class="proyecto.persistence.SapPrelacion" />
+        <mapping class="proyecto.persistence.TRenapoCurps" />
+	</session-factory>
+</hibernate-configuration>

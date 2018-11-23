@@ -1,0 +1,86 @@
+<h1>Create</h1>
+
+<form name="formCreate">
+	<div class="form-group">
+		<label for="nombre">Nombre:</label>
+		<input type="text" 
+			   class="form-control has-error"
+			   id="nombre"
+			   name="nombre"
+			   ng-model="data.nombre"
+			   ng-required = "true"
+			   ng-pattern="/^([A-Z|Ñ|a-z|ñ|Á|É|Í|Ó|Ú|á|é|í|ó|ú]+\s{0,1})+$/"
+			   ng-maxlength="50">
+		<div ng-if="formCreate.nombre.$dirty">
+			<span class="error text-danger"
+				  ng-if="formCreate.nombre.$error.required">Campo requerido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.nombre.$error.pattern">Campo inválido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.nombre.$error.maxlength">Campo demasiado largo</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="primerApellido">Primer apellido:</label>
+		<input type="text"
+			   class="form-control"
+			   id="primerApellido"
+			   name="primerApellido"
+			   ng-model="data.primerApellido"
+			   ng-required = "true"
+			   ng-pattern="/^([A-Z|Ñ|a-z|ñ|Á|É|Í|Ó|Ú|á|é|í|ó|ú]+\s{0,1})+$/"
+			   ng-maxlength="50">
+		<div ng-if="formCreate.primerApellido.$dirty">
+			<span class="error text-danger"
+				  ng-if="formCreate.primerApellido.$error.required">Campo requerido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.primerApellido.$error.pattern">Campo inválido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.primerApellido.$error.maxlength">Campo demasiado largo</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="segundoApellido">Segundo apellido:</label>
+		<input type="text"
+			   class="form-control"
+			   id="segundoApellido"
+			   name="segundoApellido"
+			   ng-model="data.segundoApellido"
+			   ng-required = "true"
+			   ng-pattern="/^([A-Z|Ñ|a-z|ñ|Á|É|Í|Ó|Ú|á|é|í|ó|ú]+\s{0,1})+$/"
+			   ng-maxlength="50">
+		<div ng-if="formCreate.segundoApellido.$dirty">
+			<span class="error text-danger"
+				  ng-if="formCreate.segundoApellido.$error.required">Campo requerido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.segundoApellido.$error.pattern">Campo inválido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.segundoApellido.$error.maxlength">Campo demasiado largo</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="correoElectronico">Correo electrónico:</label>
+		<input type="email"
+			   class="form-control"
+			   id="correoElectronico"
+			   name="correoElectronico"
+			   ng-model="data.correoElectronico"
+			   ng-required = "true"
+			   ng-maxlength="50"
+			   ng-pattern=" /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/">
+		<div ng-if="formCreate.correoElectronico.$dirty">
+			<span class="error text-danger"
+				  ng-if="formCreate.correoElectronico.$error.required">Campo requerido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.correoElectronico.$error.pattern">Campo inválido</span>
+			<span class="error text-danger"
+				  ng-if="formCreate.correoElectronico.$error.maxlength">Campo demasiado largo</span>
+		</div>
+	</div>
+	<button type="button" 
+			class="btn button-black"
+			ng-disabled="formCreate.$invalid"
+			ng-click="guardar(formCreate)">
+		Guardar
+	</button>
+</form>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Proyecto</title>
+
+	<!--Estilos Bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+	<!--JQuery-->
+	<script src="js/lib/jquery.js"></script>
+
+	<!--JS Bootstrap-->
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/bootstrap.bundle.min.js"></script>
+
+	<!--Angular JS-->
+	<script src="js/lib/angular.js"></script>
+	<script src="js/lib/angular-locale_es-es.min.js"></script>
+	<script src="js/lib/angular-routes.js"></script>
+	<!--Aplicación-->
+	<script src="js/app-proyecto.js"></script>
+	<!--Servicios-->
+	<script src="js/src/proyectoService.js"></script>
+	<!--Controladores-->
+	<script src="js/ctrl/allCtrl.js"></script>
+	<script src="js/ctrl/createCtrl.js"></script>
+	<script src="js/ctrl/oneCtrl.js"></script>	
+	<script src="js/ctrl/updateCtrl.js"></script>	
+
+</head>
+<body ng-app=proyecto>
+
+	<!--Inicio encabezado-->
+	<header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Descripción</h4>
+              <p class="text-muted">Mi primer proyecto WEB.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Secciones</h4>
+              <ul class="list-unstyled">
+                <li><a href="#/all" class="text-white">all</a></li>
+                <li><a href="#/create" class="text-white">create</a></li>
+                <li><a href="#/one" class="text-white">one</a></li>
+                <li><a href="#/update" class="text-white">update</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>Proyecto</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!--Fin encabezado-->
+
+	<!--Sección principal-->
+	<section id="main" 
+		     class="container"
+		     ng-view>
+		
+	</section>
+
+	<!--Inicio pie de página-->
+	<footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+    <!--Fin pie de página-->
+</body>
+</html>
